@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <!--하단 script는 intro 화면 연결 코드 -->
+  <script>
+    // 매번 인트로 화면을 표시하도록 설정 (개발 중)
+    /* window.location.href = "intro.html"; */
+
+    // 로컬 스토리지로 처음 방문 시에만 인트로 화면 표시
+    if (!localStorage.getItem("introShown")) {
+            localStorage.setItem("introShown", "true");
+            window.location.href = "intro.html";
+        }
+</script>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+        <span id="location-toggle">충무로</span>
+        <button class="menu-icon" id="menuButton">☰</button>
+    </div>
+    <div class="menu" id="menu">
+      <button>로그인</button>
+      <button>회원가입</button>
+      <button>마이페이지</button>
+  </div>
+    <input type="text" placeholder="맛집을 검색해 보세요" class="search-input" />
+    <div class="recommendation">
+        <button id="reviewFilter" class="filter-button">리뷰순</button>
+        <button id="ratinggFilter" class="filter-button">별점순</button>
+        <button id="ratinggFilter" class="filter-button">별점순</button>
+        <div id="recommendation-list">
+          <!-- 처음 로드될 기본 식당 카드들이 여기에 추가됩니다. -->
+      </div>
+    </div>
+</div>
+<script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 회원가입 form -->
+  <div class="signup-container">
+    <!-- 뒤로가기 버튼 추가 -->
+    <div class="back-button-container">
+    <a href="index.html">
+        <img src="images/arrow.png" class="back-button" alt="뒤로가기">
+    </a>
+    </div>
+    <h2>회원가입</h2>
+    <form id="signupForm">
+        <input type="text" id="signupUsername" placeholder="아이디" required>
+        <input type="password" id="signupPassword" placeholder="비밀번호" required>
+        <button type="submit">회원가입</button>
+    </form>
+    <p>이미 계정이 있으신가요? <a href="login.html">로그인</a></p>
+</div>
+<script src="signup.js"></script>
+</body>
+</html>
